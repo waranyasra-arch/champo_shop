@@ -1,76 +1,98 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Body Scent — น้ำหอมฉีดตัว</title>
-  <meta name="description" content="Body Scent น้ำหอมฉีดตัว 4 อารมณ์ Fresh Sweet Confident Romance">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shampoo House | ร้านขายยาสระผม</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#fffaf5;color:#39332f}
+header{background:#fff;padding:20px 7%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px #ddd}
+.logo{font-size:25px;font-weight:bold;color:#a66b4e}
+nav a{margin-left:20px;color:#594638;text-decoration:none}
+.hero{text-align:center;padding:65px 20px;background:#f4e6da}
+.hero h1{font-size:38px;color:#754d39}
+.hero p{font-size:17px}
+button{background:#a66b4e;color:white;border:0;padding:12px 22px;border-radius:7px;cursor:pointer}
+.container{max-width:1100px;margin:40px auto;padding:0 20px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 3px 12px #ddd;text-align:center;padding-bottom:22px}
+.card img{width:100%;height:240px;object-fit:cover}
+.card h3{margin:15px 8px 8px}
+.price{color:#a66b4e;font-weight:bold;font-size:20px}
+.card p{padding:0 12px;color:#777}
+footer{text-align:center;background:#f4e6da;padding:25px;margin-top:50px}
+</style>
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="index.html">Body Scent</a>
-      <nav class="nav">
-        <a href="index.html" class="active">หน้าแรก</a>
-        <a href="product.html">สินค้า</a>
-      </nav>
-    </div>
-  </header>
+<header>
+<div class="logo">Shampoo House</div>
+<nav>
+<a href="#home">หน้าแรก</a>
+<a href="#products">สินค้า</a>
+</nav>
+</header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <span class="eyebrow">Body Scent</span>
-        <h1 style="max-width: 24ch;">เติมความหอมที่ใช่ ให้เข้ากับทุกความรู้สึกในแบบที่เป็นคุณ</h1>
-        <p>น้ำหอมฉีดตัว 4 อารมณ์ ออกแบบมาให้ทุกวันของคุณมีกลิ่นที่เป็นตัวเอง</p>
-        <a class="btn" href="product.html">ดูสินค้าทั้งหมด</a>
-      </div>
-    </section>
+<section class="hero" id="home">
+<h1>ดูแลเส้นผม ให้สวยสุขภาพดีทุกวัน</h1>
+<p>เลือกยาสระผมที่เหมาะกับเส้นผมของคุณ</p>
+<a href="#products"><button>เลือกซื้อสินค้า</button></a>
+</section>
 
-    <!-- Moods -->
-    <section>
-      <div class="container">
-        <div class="section-title">
-          <span class="eyebrow">Choose your mood</span>
-          <h2>เลือกกลิ่นตามอารมณ์</h2>
-        </div>
+<main class="container" id="products">
+<h2 style="text-align:center">สินค้าของเรา</h2>
+<div class="products">
 
-        <div class="grid">
-          <a class="mood-card" data-mood="fresh" href="product.html?mood=fresh">
-            <h3><span class="mood-dot"></span>Fresh</h3>
-            <span class="mood-line" style="margin-left:auto;margin-right:auto;"></span>
-            <p>สดชื่น สะอาด เบาสบาย ปลุกพลังให้เริ่มต้นวันใหม่</p>
-          </a>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=600&q=80" alt="ผลิตภัณฑ์แชมพู">
+<h3>Shampoo Fresh</h3>
+<p>แชมพูสูตรสดชื่น ทำความสะอาดเส้นผม</p>
+<div class="price">฿159</div>
+<p>SKU: SH001</p>
+<button onclick="addCart('Shampoo Fresh',159)">สั่งซื้อสินค้า</button>
+</div>
 
-          <a class="mood-card" data-mood="sweet" href="product.html?mood=sweet">
-            <h3><span class="mood-dot"></span>Sweet</h3>
-            <span class="mood-line" style="margin-left:auto;margin-right:auto;"></span>
-            <p>หวานละมุน อบอุ่น นุ่มนวล ให้ความรู้สึกอ่อนโยน</p>
-          </a>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=600&q=80" alt="แชมพูบำรุงผม">
+<h3>Shampoo Smooth</h3>
+<p>แชมพูบำรุงผมนุ่มลื่น ลดผมพันกัน</p>
+<div class="price">฿189</div>
+<p>SKU: SH002</p>
+<button onclick="addCart('Shampoo Smooth',189)">สั่งซื้อสินค้า</button>
+</div>
 
-          <a class="mood-card" data-mood="confident" href="product.html?mood=confident">
-            <h3><span class="mood-dot"></span>Confident</h3>
-            <span class="mood-line" style="margin-left:auto;margin-right:auto;"></span>
-            <p>มั่นใจ โดดเด่น สุขุม เหมาะกับทุกการเจอผู้คน</p>
-          </a>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=600&q=80" alt="ผลิตภัณฑ์ดูแลเส้นผม">
+<h3>Shampoo Repair</h3>
+<p>แชมพูสูตรบำรุงเส้นผมแห้งเสีย</p>
+<div class="price">฿199</div>
+<p>SKU: SH003</p>
+<button onclick="addCart('Shampoo Repair',199)">สั่งซื้อสินค้า</button>
+</div>
 
-          <a class="mood-card" data-mood="romance" href="product.html?mood=romance">
-            <h3><span class="mood-dot"></span>Romance</h3>
-            <span class="mood-line" style="margin-left:auto;margin-right:auto;"></span>
-            <p>โรแมนติก นุ่มนวล น่าหลงใหล สำหรับค่ำคืนพิเศษ</p>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80" alt="แชมพูดูแลเส้นผม">
+<h3>Shampoo Herbal</h3>
+<p>แชมพูสูตรสมุนไพร สำหรับการดูแลเส้นผม</p>
+<div class="price">฿179</div>
+<p>SKU: SH004</p>
+<button onclick="addCart('Shampoo Herbal',179)">สั่งซื้อสินค้า</button>
+</div>
 
-  <footer class="site-footer">
-    <div class="container">&copy; Body Scent</div>
-  </footer>
+</div>
+</main>
 
-  <script src="script.js"></script>
+<footer>
+<p>Shampoo House | ร้านขายผลิตภัณฑ์ดูแลเส้นผม</p>
+<p>© 2026 Shampoo House</p>
+</footer>
+
+<script>
+function addCart(name,price){
+alert("เพิ่มสินค้า "+name+" ราคา "+price+" บาท เรียบร้อยแล้ว");
+}
+</script>
 </body>
 </html>
